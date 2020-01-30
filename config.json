@@ -1,0 +1,9 @@
+{
+    "build_system": {
+        "maven": "pom.xml",
+        "gradle": "build.gradle",
+        "ant": "build.xml",
+        "bazel": "WORKSPACE"
+    },
+    "contributors": {}
+}
