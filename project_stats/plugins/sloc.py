@@ -1,8 +1,7 @@
 import os
 import json
-from .plugin import plugin
 from subprocess import Popen, PIPE, TimeoutExpired
-from pprint import pprint
+from .plugin import plugin
 
 class sloc(plugin):
 

@@ -10,6 +10,7 @@ setup(
     packages=['project_stats',],
     license='MIT',
     long_description=open('README.md').read(),
+    install_requires = [],
     entry_points = {
         'console_scripts': [
             'project-stats=project_stats.cli:main'
