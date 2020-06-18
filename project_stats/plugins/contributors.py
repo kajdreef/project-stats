@@ -12,7 +12,7 @@ class contributors(plugin):
         self.config = config
 
     def check_project(self, direntry):
-        git_process = Popen(["git", "--no-pager", "shortlog", "-sn"], stdout=PIPE, cwd=direntry.path)
+        git_process = Popen(["git", "--no-pager", "shortlog", "-sn"], stdout=PIPE, cwd=direntry)
         contributor_count = Popen(["wc", "-l"], stdin=git_process.stdout, stdout=PIPE)
 
         try:
@@ -21,4 +21,4 @@ class contributors(plugin):
             contributor_count.kill()
             count = 0
         
-        return {"contributors": count}
+        return count

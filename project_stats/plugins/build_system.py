@@ -12,9 +12,9 @@ class build_system(plugin):
 
     def check_project(self, direntry):
         for build_system, identifier in self.config.items():
-            result = reduce(lambda x, y: x or y, map(lambda x: identifier in x, os.listdir(direntry.path)))
+            result = reduce(lambda x, y: x or y, map(lambda x: identifier in x, os.listdir(direntry)))
             if result:
-                return {"build_system": build_system}
+                return build_system
             else:
                 continue
-        return {"build_system", "unknown"}
+        return "unknown"

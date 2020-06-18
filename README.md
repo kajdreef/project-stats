@@ -1,14 +1,19 @@
-# Small infrastructure to get some statistics on a set of projects
+# Project-stats
 
 Goal of the project is to create a tool that quickly gives some statistics about the projects I use for research purposes.
+
+## How to install:
+
+- Install the following tools:
+    - [scc](https://github.com/boyter/scc/)
+    - [git](https://git-scm.com/)
+
+- The tool itself can be installed using: `pip install -e .`
 
 ## Plugins:
 - [x] Detect build system (limited to: gradle, maven, bazel, and ant).
 - [x] Number of contributors
-- [ ] Line count (maybe use scc or cloc?)
+- [x] Line count (maybe use scc or cloc?)
+- [ ] Total number of commits
+- [ ] Age of project (date last commit - date first commit)
 - [ ] Number of test methods
-- [ ] Get information from github
-
-## Resources:
-
-- [Dynamically loading plugins](http://www.blog.pythonlibrary.org/2012/07/31/advanced-python-how-to-dynamically-load-modules-or-classes/)
